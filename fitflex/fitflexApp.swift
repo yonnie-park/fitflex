@@ -1,17 +1,20 @@
-//
-//  fitflexApp.swift
-//  fitflex
-//
-//  Created by Jessie Park on 3/12/26.
-//
-
 import SwiftUI
 
 @main
-struct fitflexApp: App {
+struct FitFlexApp: App {
+    @State private var healthKitManager = HealthKitManager()
+
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environment(healthKitManager)
+                .onReceive(NotificationCenter.default.publisher(
+                    for: UIApplication.willEnterForegroundNotification)
+                ) { _ in
+                    Task {
+                        await healthKitManager.fetchWorkouts()
+                    }
+                }
         }
     }
 }

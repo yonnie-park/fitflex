@@ -6,13 +6,53 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXCopyFilesBuildPhase section */
+		095510E52F67B8D200575A41 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		09550FE32F62B34100575A41 /* fitflex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fitflex.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		095510D02F67B8D100575A41 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		095510D22F67B8D100575A41 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		096FA10F2F67D85700D59DC1 /* Exceptions for "fitflex" folder in "fitflex" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Components/WorkoutIconName.swift,
+				Info.plist,
+			);
+			target = 09550FE22F62B34100575A41 /* fitflex */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+		09AD2C442F69431000F621EF /* Exceptions for "fitflex" folder in "Copy Bundle Resources" phase from "fitflex" target */ = {
+			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
+			buildPhase = 09550FE12F62B34100575A41 /* Resources */;
+			membershipExceptions = (
+				Components/WorkoutIconName.swift,
+			);
+		};
+/* End PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		09550FE52F62B34100575A41 /* fitflex */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				096FA10F2F67D85700D59DC1 /* Exceptions for "fitflex" folder in "fitflex" target */,
+				09AD2C442F69431000F621EF /* Exceptions for "fitflex" folder in "Copy Bundle Resources" phase from "fitflex" target */,
+			);
 			path = fitflex;
 			sourceTree = "<group>";
 		};
@@ -33,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				09550FE52F62B34100575A41 /* fitflex */,
+				095510CF2F67B8D100575A41 /* Frameworks */,
 				09550FE42F62B34100575A41 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -45,6 +86,15 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		095510CF2F67B8D100575A41 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				095510D02F67B8D100575A41 /* WidgetKit.framework */,
+				095510D22F67B8D100575A41 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -55,6 +105,7 @@
 				09550FDF2F62B34100575A41 /* Sources */,
 				09550FE02F62B34100575A41 /* Frameworks */,
 				09550FE12F62B34100575A41 /* Resources */,
+				095510E52F67B8D200575A41 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
@@ -251,11 +302,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = fitflex/fitflex.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4QFVXJR8B9;
 				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = fitflex/Info.plist;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "FitFlex needs access to your workouts.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "FitFlex needs access to your health data.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -283,11 +339,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = fitflex/fitflex.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4QFVXJR8B9;
 				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = fitflex/Info.plist;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "FitFlex needs access to your workouts.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "FitFlex needs access to your health data.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

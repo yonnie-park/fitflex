@@ -1,24 +1,18 @@
-//
-//  ContentView.swift
-//  fitflex
-//
-//  Created by Jessie Park on 3/12/26.
-//
-
 import SwiftUI
 
 struct ContentView: View {
-    var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
-        .padding()
-    }
-}
+    @Environment(HealthKitManager.self) private var healthKitManager
 
-#Preview {
-    ContentView()
+    var body: some View {
+        NavigationStack {
+            MainView()
+        }
+        .onAppear {
+            Task {
+                await healthKitManager.requestAuthorization()
+                await NotificationManager.shared.requestPermission()
+                await healthKitManager.enableBackgroundDelivery()
+            }
+        }
+    }
 }
