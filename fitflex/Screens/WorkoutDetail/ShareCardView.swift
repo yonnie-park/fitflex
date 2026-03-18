@@ -43,6 +43,8 @@ struct ShareCardView: View {
                                         .padding(.vertical, 16)
                                         .background(Capsule().fill(Color.fitBgBtn))
                                     }
+                                    .accessibilityIdentifier("action-album")
+                                    .accessibilityLabel("Choose from album")
 
                                     // Camera button (icon only)
                                     Button {
@@ -54,6 +56,8 @@ struct ShareCardView: View {
                                             .frame(width: 52, height: 52)
                                             .background(Capsule().fill(Color.fitBgBtn))
                                     }
+                                    .accessibilityIdentifier("action-camera")
+                                    .accessibilityLabel("Take photo")
 
                                     // Save button
                                     Button {
@@ -70,6 +74,8 @@ struct ShareCardView: View {
                                         .padding(.vertical, 16)
                                         .background(Capsule().fill(Color.fitBgBtn))
                                     }
+                                    .accessibilityIdentifier("action-save")
+                                    .accessibilityLabel("Save to photos")
                                 }
                                 .padding(.horizontal, 24)
 

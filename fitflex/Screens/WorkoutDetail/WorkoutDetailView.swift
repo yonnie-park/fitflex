@@ -26,6 +26,8 @@ struct WorkoutDetailView: View {
                             .font(.system(size: 16, weight: .semibold))
                             .foregroundColor(.fitText)
                     }
+                    .accessibilityIdentifier("nav-back")
+                    .accessibilityLabel("Back")
                     .padding(.top, 16)
 
                     // Icon + title + date

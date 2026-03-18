@@ -49,6 +49,8 @@ struct CalendarView: View {
                         .font(.system(size: 14, weight: .semibold))
                         .foregroundColor(.fitMuted)
                 }
+                .accessibilityIdentifier("nav-prev-month")
+                .accessibilityLabel("Previous month")
                 Spacer()
                 Text(monthLabel())
                     .font(.a2zBold(size: 22))
@@ -59,6 +61,8 @@ struct CalendarView: View {
                         .font(.system(size: 14, weight: .semibold))
                         .foregroundColor(.fitMuted)
                 }
+                .accessibilityIdentifier("nav-next-month")
+                .accessibilityLabel("Next month")
             }
 
             HStack(spacing: 0) {

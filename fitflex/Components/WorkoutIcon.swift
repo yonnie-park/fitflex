@@ -12,6 +12,7 @@ struct WorkoutIcon: View {
                 .font(.system(size: 20))
                 .foregroundColor(.fitRed)
         }
+        .accessibilityLabel("\(type) workout")
     }
 }
 

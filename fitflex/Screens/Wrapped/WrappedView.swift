@@ -169,6 +169,8 @@ struct WrappedView: View {
                             .foregroundColor(.fitText)
                             .frame(maxWidth: .infinity, alignment: .leading)
                     }
+                    .accessibilityIdentifier("nav-back-wrapped")
+                    .accessibilityLabel("Back")
                     .padding(.top, 16)
                     .padding(.horizontal, 20)
                     

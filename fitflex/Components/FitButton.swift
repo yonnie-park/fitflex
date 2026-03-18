@@ -8,6 +8,7 @@ enum FitButtonStyle {
 struct FitButton: View {
     let title: String
     let style: FitButtonStyle
+    var identifier: String? = nil
     let action: () -> Void
 
     var body: some View {
@@ -42,5 +43,7 @@ struct FitButton: View {
             .frame(maxWidth: .infinity)
             .frame(height: 56)
         }
+        .accessibilityIdentifier(identifier ?? "action-\(title.lowercased().replacingOccurrences(of: " ", with: "-"))")
+        .accessibilityLabel(title)
     }
 }

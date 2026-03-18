@@ -38,5 +38,7 @@ struct RecentWorkoutRow: View {
                     .fill(Color.fitBgBtn)
             )
         }
+        .accessibilityIdentifier("workout-row-\(workout.id.uuidString)")
+        .accessibilityLabel("\(workout.type), \(workout.formattedDate)")
     }
 }

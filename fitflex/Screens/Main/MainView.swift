@@ -39,6 +39,7 @@ struct MainView: View {
                     .frame(height: 32)
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(.top, 8)
+                    .accessibilityLabel("FitFlex logo")
                 
                 // Wrapped chips
                 if !availableMonths.isEmpty {
@@ -51,6 +52,7 @@ struct MainView: View {
                                 )) {
                                     WrappedMonthChip(month: month)
                                 }
+                                .accessibilityIdentifier("wrapped-chip")
                             }
                         }
                         .padding(.horizontal, 20)
